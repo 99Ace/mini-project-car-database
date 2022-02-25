@@ -1,0 +1,12 @@
+{{#extends 'base'}}
+
+{{#block "title"}} CAR DATABASES {{/block}}
+{{#block "content"}} 
+    <h2>CAR REFERENCE DATA</h2>
+    <a href="" class="btn btn-dark">Create New Model</a>
+    {{#each data}}
+        <div><b>{{this.make}} {{this.model}}</b></div>
+    {{/each}}
+{{/block}}
+
+{{/extends}}

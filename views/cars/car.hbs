@@ -1,0 +1,11 @@
+{{#extends 'base'}}
+
+{{#block "title"}} CAR INFORMATION {{/block}}
+{{#block "content"}} 
+    <h2>CAR DETAILS</h2>
+    {{#each data}}
+        <div><b>{{this.make}} {{this.model}}</b></div>
+    {{/each}}
+{{/block}}
+
+{{/extends}}
