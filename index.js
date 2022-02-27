@@ -189,6 +189,11 @@ async function main() {
         let dataCar = await CAR_INFO.find().toArray();
         res.render('cars/car')
     })
+    // CREATE
+
+    // UPDATE
+
+    // DELETE
 
     // ==========================================================
     // REFERENCE ROUTE
@@ -198,6 +203,13 @@ async function main() {
         let dataReference = await CAR_REFERENCE.find().toArray();
         res.render('references/reference')
     })
+    // CREATE
+    app.get('/car9/reference/create', (req,res) => {
+        res.render('car9_reference/car_create')
+    })
+    // UPDATE
+
+    // DELETE
 
 
     // ==========================================================

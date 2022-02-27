@@ -1,0 +1,15 @@
+{{#extends 'base'}}
+
+{{#block "title"}} DELETE OWNER {{/block}}
+
+{{#block "content"}} 
+    <h2>DELETE OWNER DATA ?</h2>
+    <h3>Please confirm the deletion for {{user.username}}</h3>
+    <div>{{user.fname}} {{user.lname}}</div>
+    <form method="POST">
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="/owner" class="btn btn-dark">back</a>
+    </form>
+{{/block}}
+
+{{/extends}}

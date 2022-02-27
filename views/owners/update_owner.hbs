@@ -1,0 +1,37 @@
+{{#extends 'base'}}
+
+{{#block "title"}}UPDATE DATA {{/block}}
+{{#block "content"}}
+<form method="POST" class="row">
+    <div class="col-12 col-md-6">
+        <hr>
+        <h4>CAR OWNER DETAILS</h4>
+        <div class="mt-2">
+            <input type="text" name="username" placeholder="username" value="{{user.username}}">
+        </div>
+        <div class="mt-2">
+            <input type="text" name="fname" placeholder="first_name" value="{{user.fname}}">
+            <input type="text" name="lname" placeholder="last_name" value="{{user.lname}}">
+        </div>
+        <div class="mt-2">
+            <input type="email" name="email" placeholder="email" value="{{user.email}}">
+        </div>
+        <div>
+            <input type="checkbox" 
+            {{#inArray user.ownership "SCN3430M"}} checked {{/inArray}}
+            > SCN3430M
+        </div>
+        {{!-- <div class="mt-2">
+            <input type="password" name="password" placeholder="password" value="={{user.password}}">
+            <input type="password" name="password_confirm" placeholder="password again">
+        </div> --}}
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="mt-2">
+            <button class="btn btn-dark">Submit</button>
+        </div>
+    </div>
+</form>
+{{/block}}
+
+{{/extends}}

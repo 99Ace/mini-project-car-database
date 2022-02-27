@@ -3,12 +3,14 @@
 {{#block "title"}} OWNERS DATABASES {{/block}}
 {{#block "content"}} 
     <h2>OWNERS DATA</h2>
-    <a href="" class="btn btn-dark">Create New Model</a>
+    <a href="/owner/create" class="btn btn-dark">Create New Model</a>
     {{#each data}}
         <div class="row">
             <div class="col-8"><b>{{this.username}} {{this.fname}} {{this.lname}}</b></div>
             <div class="col-4">
-                <a href="">edit</a> | <a href="">delete</a> | <a href="">add car</a>
+                <a href="/owner/{{this._id}}/update">edit</a> | 
+                <a href="/owner/{{this._id}}/delete">delete</a> | 
+                <a href="">add car</a>
             </div>
         </div>
     {{/each}}
